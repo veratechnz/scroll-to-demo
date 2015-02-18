@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css"/>
+	<style>
+		.panels{
+			background-color: #efefef; height: 400px;
+			margin-top: 1%;
+			text-align: center;
+		}
+		.nuwidth{
+			width: 92%;
+			margin: 0 auto;
+		}
+		.top{
+			color: black;
+			float: right;
+			position: absolute;
+			bottom: 0;
+			right: 10%;
+
+		}
+	</style>
+</head>
+<body>
+
+	<div class="all-butttons" id="to-top">
+		<button type="button" class="btn btn-primary btn-lg btn-block nuwidth" id="this-button">This</button>
+		<button type="button" class="btn btn-primary btn-lg btn-block nuwidth" id="is-button">Is</button>
+		<button type="button" class="btn btn-primary btn-lg btn-block nuwidth" id="yet-button">Yet</button>
+		<button type="button" class="btn btn-primary btn-lg btn-block nuwidth" id="another-button">Another</button>
+		<button type="button" class="btn btn-primary btn-lg btn-block nuwidth" id="section-button">Section</button>
+	</div>
+
+	<section id="a">
+		<div class="row">
+			<div class="col-md-12 panels">
+				<h1>This</h1>
+			</div>
+		</div>	
+	</section>
+	
+	<section id="b">
+		<div class="row">
+			<div class="col-md-12 panels">
+				<h1>is</h1>
+			</div>
+		</div>
+	</section>
+	
+	<section id="c">
+		<div class="row">
+			<div class="col-md-12 panels">
+				<h1>yet</h1>
+				<h4 class="top"><a href="#" id="back">Back to top</a></h4>
+			</div>
+		</div>	
+	</section>
+	
+	<section id="d">
+		<div class="row">
+			<div class="col-md-12 panels">
+				<h1>another</h1>
+			</div>
+		</div>
+	</section>
+	
+	<section class="e">
+		<div class="row">
+			<div class="col-md-12 panels">
+				<h1>section.</h1>
+			</div>
+		</div>
+	</section>
+		
+	<script src="node_modules/jquery/dist/jquery.js"></script>
+	<script src="js/jquery.scrollTo.js"></script>
+	<script src="custom.js"></script>
+	<script>
+	//Basic Function For ScrollTo
+	// http://demos.flesler.com/jquery/scrollTo/
+	
+		$(function(){
+		
+			//Menu slide control
+			$('#yet-button').click(function(){
+				$(document).scrollTo('#c', 2500)
+			});	
+
+			// Top button slide control		
+			$('#back').click(function(){
+				$(document).scrollTo('#to-top', 2000);
+			});
+
+		});
+
+	</script>
+</body>
+</html>
